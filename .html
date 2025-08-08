@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaan'dan Damla'ya</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #ffe6f0;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 28px;
+      color: #d63384;
+    }
+    #buttons {
+      margin-top: 40px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #yes {
+      background-color: #28a745;
+      color: white;
+    }
+    #no {
+      background-color: #dc3545;
+      color: white;
+      position: relative;
+    }
+    #message {
+      display: none;
+      margin-top: 30px;
+      font-size: 22px;
+      color: #6f42c1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Damla, benimle barışır mısın?</h1>
+  <div id="buttons">
+    <button id="yes">Evet</button>
+    <button id="no">Hayır</button>
+  </div>
+  <div id="message">Biliyordum zaten! 😎 Seni seviyorum ❤️ - Kaan</div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const msg = document.getElementById("message");
+
+    noBtn.addEventListener("mouseover", () => {
+      noBtn.style.position = "absolute";
+      noBtn.style.top = Math.random() * 80 + "%";
+      noBtn.style.left = Math.random() * 80 + "%";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.getElementById("buttons").style.display = "none";
+      msg.style.display = "block";
+    });
+  </script>
+</body>
+</html>
